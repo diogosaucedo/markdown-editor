@@ -1,0 +1,9 @@
+{
+  "short_name": "Markdown Editor",
+  "name": "Markdown Editor",
+  "icons": [
+
+  ],
+  "start_url": ".",
+  "display": "standalone"
+}
