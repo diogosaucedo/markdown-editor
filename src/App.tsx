@@ -1,20 +1,14 @@
+import JsPDF from 'jspdf';
 import React from 'react';
+
+import View from './components/Editor/View';
 import Button from './components/Form/Button';
 import Textarea from './components/Form/Textarea';
 import Center from './components/Layout/Center';
 import Flex from './components/Layout/Flex';
 import { black, white } from './configs/colors';
 import GlobalStyles from './styles/GlobalStyles';
-import hljs from 'highlight.js';
-import { marked } from 'marked';
-import View from './components/Editor/View';
-import JsPDF from 'jspdf';
-
-marked.setOptions({
-  highlight: function (code) {
-    return hljs.highlightAuto(code).value;
-  },
-});
+import marked from './utils/external/marked';
 
 function App() {
   const [text, setText] = React.useState('');
@@ -30,7 +24,7 @@ function App() {
     setMd(marked(text));
   }, [text]);
 
-  const toPDF = () => {
+  const htmlToPdf = () => {
     const doc = new JsPDF({
       orientation: 'portrait',
       format: 'a4',
@@ -52,13 +46,13 @@ function App() {
       <GlobalStyles />
       <Center background={black} width="100%" height="48px">
         <Button
-          onClick={toPDF}
+          onClick={htmlToPdf}
           background={white}
           color={black}
           width="96px"
           height="100%"
           fontSize="12px"
-          fontWeight={500}
+          fontWeight={700}
           borderRadius="4px"
         >
           Export PDF
