@@ -7,6 +7,7 @@ const Textarea = styled.textarea<TextareaType>`
   height: ${({ height }) => height};
   min-height: ${({ minHeight }) => minHeight};
   padding: ${({ padding }) => padding};
+  resize: none;
 
   // Display
   border-radius: ${({ borderRadius }) => borderRadius};
