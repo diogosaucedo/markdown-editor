@@ -13,6 +13,8 @@ const Button = styled.button<ButtonType>`
   outline: none;
   color: ${({ color }) => color};
   font-size: ${({ fontSize }) => fontSize};
+  font-family: ${({ fontFamily }) => fontFamily || 'inherit'};
+  font-weight: ${({ fontWeight }) => fontWeight || 'inherit'};
   text-decoration: ${({ textDecoration }) => textDecoration};
   :hover {
     cursor: pointer;

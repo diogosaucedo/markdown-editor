@@ -12,6 +12,8 @@ const Button = ({
   border,
   color,
   fontSize,
+  fontFamily,
+  fontWeight,
   textDecoration,
   hover,
 }: ButtonType) => {
@@ -25,6 +27,8 @@ const Button = ({
       border={border}
       color={color}
       fontSize={fontSize}
+      fontFamily={fontFamily}
+      fontWeight={fontWeight}
       textDecoration={textDecoration}
       hover={hover}
     >

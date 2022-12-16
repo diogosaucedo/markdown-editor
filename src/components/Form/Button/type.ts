@@ -10,6 +10,8 @@ type ButtonType = {
   border?: string;
   color?: string;
   fontSize?: string;
+  fontFamily?: string;
+  fontWeight?: number;
   textDecoration?: string;
   hover?: string;
 };
