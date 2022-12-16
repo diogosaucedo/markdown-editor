@@ -1,0 +1,3 @@
+The 'ref' and 'dangerouslySetInnerHTML' types in 'view' need to be refactored, both are
+with type 'any', practice not recommended. In my research I did not find a suitable solution
+for the problem.
