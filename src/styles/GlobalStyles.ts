@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { darkGray, white } from '../configs/colors';
 
 export default createGlobalStyle`
   * {
@@ -6,21 +7,24 @@ export default createGlobalStyle`
     padding: 0;
     outline: none;
     box-sizing: border-box;
+    /* font-size: 62.5%; // 1rem = 10px */
   }
 
   body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     font-family: sans-serif;
-    font-size: 62.5%; // 1rem = 10px
     font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    background-color: ${darkGray};
 
   }
 
-  html, body, #root {
-    min-height: 100%;
+  .App {
+    margin: 0 auto;
+    max-width: 865px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: ${white};
+
   }
 
   a {
